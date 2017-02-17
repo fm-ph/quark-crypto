@@ -1,0 +1,85 @@
+{
+  "name": "quark-crypto",
+  "version": "0.0.0-development",
+  "description": "Simple CLI tool to encrypt/decrypt multiple files",
+  "bin": {
+    "qcrypto": "bin/index.js"
+  },
+  "scripts": {
+    "build": "BABEL_ENV=production babel src -d bin",
+    "prepublish": "npm run build",
+    "test": "ava",
+    "test:watch": "ava --watch --verbose",
+    "test:coverage": "nyc npm test",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "keywords": [
+    "quark",
+    "cli",
+    "tool",
+    "crypto",
+    "encrypt",
+    "decrypt"
+  ],
+  "author": "fm_ph",
+  "contributors": [
+    "Patrick Heng <hengpatrick.pro@gmail.com> (http://hengpatrick.fr/)",
+    "Fabien Motte <contact@fabienmotte.com> (http://fabienmotte.com/)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fm-ph/quark-crypto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fm-ph/quark-crypto/issues"
+  },
+  "homepage": "https://github.com/fm-ph/quark-crypto",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.18.1",
+    "babel-cli": "^6.23.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babelify": "^7.3.0",
+    "executive": "^1.1.8",
+    "fs-extra": "^2.0.0",
+    "install": "^0.8.7",
+    "npm": "^4.2.0",
+    "nyc": "^10.1.2",
+    "random-string": "^0.1.2",
+    "tmp": "0.0.31",
+    "semantic-release": "^6.3.2"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "globby": "^6.1.0",
+    "inquirer": "^3.0.1",
+    "node-cipher": "^6.3.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ],
+    "ignore": "test.js",
+    "env": {
+      "development": {
+        "sourceMaps": "inline",
+        "plugins": [
+          "transform-runtime"
+        ]
+      }
+    }
+  },
+  "ava": {
+    "files": [
+      "test/index.js"
+    ],
+    "require": [
+      "babel-core/register"
+    ]
+  }
+}

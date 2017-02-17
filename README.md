@@ -1,5 +1,6 @@
 # quark-crypto
 
+[![build status][travis-image]][travis-url]
 [![stability][stability-image]][stability-url]
 [![npm version][npm-image]][npm-url]
 [![js-standard-style][standard-image]][standard-url]
@@ -111,6 +112,8 @@ npm run build
 
 MIT [License](LICENSE.md) © [Patrick Heng](http://hengpatrick.fr/) [Fabien Motte](http://fabienmotte.com/) 
 
+[travis-image]: https://img.shields.io/travis/fm-ph/quark-crypto/master.svg?style=flat-square
+[travis-url]: http://travis-ci.org/fm-ph/quark-crypto
 [stability-image]: https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square
 [stability-url]: https://nodejs.org/api/documentation.html#documentation_stability_index
 [npm-image]: https://img.shields.io/npm/v/quark-crypto.svg?style=flat-square

@@ -1,4 +1,4 @@
-# quark-crypto
+# [<img src="logo.png" alt="quark-crypto" width="200">](https://github.com/fm-ph/quark-crypto)
 
 [![build status][travis-image]][travis-url]
 [![stability][stability-image]][stability-url]

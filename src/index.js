@@ -117,7 +117,7 @@ commands.map(cmd => {
     .option('-e, --extension <value>', `extension appended to the ${cmd}ed files`)
     .option('-f, --folder <value>', `folder used to ${cmd} files`)
     .option('-p, --password <value>', `password used to ${cmd} files`)
-    .action(({ algorithm = 'aes-256-ctr', digest = 'sha256', extension = 'encrypted', folder = './', password = null }) => {
+    .action(({ algorithm = 'aes-256-cbc', digest = 'sha256', extension = 'encrypted', folder = './', password = null }) => {
       if (password) {
         cipher({ cmd, algorithm, digest, extension, folder, password })
       } else {

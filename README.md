@@ -20,7 +20,7 @@ It will install `quark-crypto` package globally, so that you can use `qcrypto` b
 
 ## Usage
 
-By default, it will encrypt/decrypt all files in the current directory using `aes-256-ctr` algorithm and 'sha256' digest.
+By default, it will encrypt/decrypt all files in the current directory using `aes-256-cbc` algorithm and 'sha256' digest.
 It will append `.encrypted` extension to encrypted files and remove it after decryption.
 
 ```sh
@@ -38,7 +38,7 @@ $ qcrypto <(e)ncrypt|(d)ecrypt> [options]
 
 | Flag          | Alias | Type     | Description                                                                                                                              | Default       |
 | ------------- | ----- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `--algorithm` | `-a`  | `string` | Algorithm used to create the cipher                                                                                                      | `aes-256-ctr` |
+| `--algorithm` | `-a`  | `string` | Algorithm used to create the cipher                                                                                                      | `aes-256-cbc` |
 | `--digest`    | `-d`  | `string` | HMAC digest algorithm used to derive the key                                                                                             | `sha256`      |
 | `--extension` | `-e`  | `string` | Extension appended to the encrypted/decrypted files                                                                                      | `encrypted`   |
 | `--folder`    | `-f`  | `string` | Folder used to encrypt/decrypt files                                                                                                     | `./`          |

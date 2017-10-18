@@ -1,13 +1,14 @@
 import test from 'ava'
 import exec from 'executive'
 import fs from 'fs-extra'
+import path from 'path'
 import randomString from 'random-string'
 
 import pkg from '../package.json'
 
 import { createTmpFile } from './utils'
 
-const bin = pkg.bin.qcrypto
+const bin = path.join(__dirname, '..', pkg.bin.qcrypto)
 
 const tmpFolder = './test/.tmp'
 const password = randomString()
